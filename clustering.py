@@ -41,17 +41,17 @@ ID_train=train['ID']
 train.drop('y', axis=1, inplace=True)
 X=train
 
-
+#NB de cluster optimum par la m"thode de la silhouette
 for n_cluster in range(2, 11):
     kmeans = KMeans(n_clusters=n_cluster).fit(X)
     label = kmeans.labels_
     sil_coeff = silhouette_score(X, label, metric='euclidean')
     print("For n_clusters={}, The Silhouette Coefficient is {}".format(n_cluster, sil_coeff))
 
-
+    
+#NB de cluster optimum par la méthode du coude
 cluster_range = range( 1, 20 )
 cluster_errors = []
-
 
 for num_clusters in cluster_range:
   clusters = KMeans( num_clusters )
