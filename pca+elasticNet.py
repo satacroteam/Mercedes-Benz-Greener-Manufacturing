@@ -7,6 +7,12 @@ from sklearn.decomposition import PCA, KernelPCA,  FastICA
 from sklearn.model_selection import KFold, train_test_split
 from sklearn.linear_model import ElasticNet, MultiTaskElasticNetCV, ElasticNetCV, LassoLarsCV
 import matplotlib.pyplot as plt
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import r2_score
+
+from skmca import MCA
+
+
 #import xgboost as xgb
 
 pd.set_option('display.max_rows', 10)
@@ -73,17 +79,27 @@ PCA_X = dimension_reduction(X, y, PCA(n_components=n_comp), n_comp, plot=True)
 
 # Elastic Net
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.6, random_state=500)
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random_state=500)
 
 
 # clf = LassoLarsCV(fit_intercept=True, verbose=False, max_iter=500, normalize=True, precompute='auto', cv=None,
 #             max_n_alphas=1000, n_jobs=1, eps=2.2204460492503131e-16, copy_X=True, positive=False)
 
 clf = ElasticNetCV(l1_ratio=0.5, eps=0.0001, n_alphas=1000, alphas=None, fit_intercept=True, normalize=False,
-                   precompute='auto', max_iter=10000, tol=0.0001, cv=3, copy_X=True, verbose=0, n_jobs=1,
+                   precompute='auto', max_iter=10000, tol=0.0001, cv=3, copy_X=True, verbose=0, n_jobs=-1,
                    positive=False, random_state=None, selection='random')
 
 clf.fit(X_train, y_train)
 r2_score_elastic_net = clf.score(X_test, y_test)
 
-clf.predict(test.iloc[:, 1:])
+# Set the parameters by cross-validation
+tuned_parameters = {'l1_ratio': np.array(range(1, 10))/float(10), 'eps': [1e-3, 1e-4, 1e-5],
+                     'n_alphas': [500, 1000, 2000], 'max_iter': [500, 1000],
+                     'tol': [1e-3, 1e-4, 1e-5], 'positive': [True, False], 'selection':['random', 'cyclic']}
+
+clf = GridSearchCV(ElasticNetCV(fit_intercept=True, normalize=False, precompute='auto', cv=3), tuned_parameters, verbose=1)
+clf.fit(X_train, y_train)
+clf.score(X_test, y_test)
+#clf.predict(test.iloc[:, 1:])
+
+
