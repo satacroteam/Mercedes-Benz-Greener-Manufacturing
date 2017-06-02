@@ -8,6 +8,7 @@ from sklearn.decomposition import NMF
 from sklearn.decomposition import TruncatedSVD
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import log_loss
+from sklearn.metrics import r2_score
 from sklearn.cross_validation import train_test_split
 from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
 
@@ -102,15 +103,15 @@ def score(params):
     dvalid = xgb.DMatrix(X_test, label=y_test)
     # watchlist = [(dvalid, 'eval'), (dtrain, 'train')]
     model = xgb.train(params, dtrain, num_round)
-    predictions = model.predict(dvalid).reshape((X_test.shape[0], 9))
-    score = log_loss(y_test, predictions)
-    print("\tScore {0}\n\n").format(score)
+    predictions = model.predict(dvalid)
+    score = r2_score(y_test, predictions)
+    print(score)
     return {'loss': score, 'status': STATUS_OK}
 
 
 def optimize(trials):
     space = {
-             'n_estimators' : hp.quniform('n_estimators', 100, 1000, 1),
+             'n_estimators': hp.quniform('n_estimators', 100, 1000, 1),
              'n_trees': hp.quniform('n_trees',10, 2000, 10),
              'eta' : hp.quniform('eta', 0.001, 0.8, 0.001),
              'max_depth' : 4,
@@ -178,7 +179,7 @@ model = xgb.train(dict(xgb_params, silent=0), dtrain, num_boost_round=num_boost_
 from sklearn.metrics import r2_score
 
 print(r2_score(model.predict(dtrain), dtrain.get_label()))
-"""
+
 
 # make predictions and save results
 y_pred = model.predict(dtest)
@@ -186,4 +187,4 @@ y_pred = model.predict(dtest)
 output = pd.DataFrame({'id': test['ID'].astype(np.int32), 'y': y_pred})
 output.to_csv('submission_baseLine.csv', index=False)
 
-
+"""
