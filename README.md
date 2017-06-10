@@ -15,7 +15,7 @@ https://github.com/kcrandall/Kaggle_Mercedes_Manufacturing
 
 ## Résultats
 
-model | Public LB | Date
---- | --- | --- 
-Xgboost ICA PCA TSVD GRP SRP | 0.56784 | 10th June 2017
-Xgboost ICA PCA | 0.55983 | 1th June 2017 
+model | Public LB | Date | Script
+--- | --- | --- | ---
+Xgboost ICA PCA TSVD GRP SRP | 0.56784 | 10th June 2017 | [Script 5] (https://github.com/satacroteam/les-jeunes/blob/master/SCRIPT/script_5.py)
+Xgboost ICA PCA | 0.55983 | 1th June 2017 | ***
