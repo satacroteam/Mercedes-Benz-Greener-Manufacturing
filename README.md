@@ -14,6 +14,9 @@ https://github.com/leexa90/Mercedes-Benz-Greener-Manufacturing
 https://github.com/kcrandall/Kaggle_Mercedes_Manufacturing
 https://github.com/CuriousAI/ladder
 
+Tuto d'utilisation de Tpot:
+https://rhiever.github.io/tpot/using/
+
 ## Résultats
 
 model | Public LB | Date | Script
