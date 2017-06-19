@@ -1,0 +1,9 @@
+exported_pipeline = make_pipeline(
+    StackingEstimator(estimator=LassoLarsCV(normalize=True)),
+    StackingEstimator(
+        estimator=GradientBoostingRegressor(learning_rate=0.00905, loss="huber", max_depth=6, max_features=0.7,
+                                            min_samples_leaf=16, min_samples_split=14, subsample=0.805)),
+    DecisionTreeRegressor(max_depth=4, min_samples_leaf=6, min_samples_split=13),
+    LassoLarsCV()
+
+)
