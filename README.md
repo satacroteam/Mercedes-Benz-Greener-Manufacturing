@@ -17,6 +17,9 @@ https://github.com/CuriousAI/ladder
 Tuto d'utilisation de Tpot:
 https://rhiever.github.io/tpot/using/ ou https://github.com/rhiever/tpot.git
 
+Guide complet stacking:
+  https://mlwave.com/kaggle-ensembling-guide/
+
 ## Résultats
 
 model | Public LB | Date | Script
