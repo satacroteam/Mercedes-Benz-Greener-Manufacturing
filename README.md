@@ -11,12 +11,15 @@ To ensure the safety and reliability of each and every unique car configuration 
 
 In this competition, Daimler is challenging Kagglers to tackle the curse of dimensionality and reduce the time that cars spend on the test bench. Competitors will work with a dataset representing different permutations of Mercedes-Benz car features to predict the time it takes to pass testing. Winning algorithms will contribute to speedier testing, resulting in lower carbon dioxide emissions without reducing Daimler’s standards.
 
-Checker ça:
-https://www.kaggle.com/c/quora-question-pairs/discussion/34355
-https://github.com/mpearmain/merc/blob/master/src/datasets/build_datasetV1.py
-https://github.com/leexa90/Mercedes-Benz-Greener-Manufacturing
-https://github.com/kcrandall/Kaggle_Mercedes_Manufacturing
-https://github.com/CuriousAI/ladder
+## Codes
+</ul>
+<li>https://www.kaggle.com/c/quora-question-pairs/discussion/34355<li>
+<li>https://github.com/mpearmain/merc/blob/master/src/datasets/build_datasetV1.py<li>
+<li>https://github.com/leexa90/Mercedes-Benz-Greener-Manufacturing<li>
+<li>https://github.com/kcrandall/Kaggle_Mercedes_Manufacturing<li>
+<li>https://github.com/CuriousAI/ladder<li>
+</ul>
+
 
 Tuto d'utilisation de Tpot:
 https://rhiever.github.io/tpot/using/ ou https://github.com/rhiever/tpot.git
