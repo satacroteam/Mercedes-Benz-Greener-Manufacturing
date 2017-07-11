@@ -32,8 +32,11 @@ Guide complet stacking:
 
 model | Public LB | Date | Script
 --- | --- | --- | ---
+Xgboost ICA PCA TSVD GRP SRP Stack Optimisation | 0.57066 | 24th June 2017 | [Script 7]
 Xgboost ICA PCA TSVD GRP SRP Stack | 0.56831 | 12th June 2017 | [Script 6](https://github.com/satacroteam/les-jeunes/blob/master/SCRIPT/script_6py)
 Xgboost ICA PCA TSVD GRP SRP | 0.56784 | 10th June 2017 | [Script 5](https://github.com/satacroteam/les-jeunes/blob/master/SCRIPT/script_5.py)
 Xgboost ICA PCA | 0.55983 | 1th June 2017 | ***
 
 ## Private Leader Board
+
+Classement: 204/3697
