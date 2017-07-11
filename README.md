@@ -36,4 +36,4 @@ Xgboost ICA PCA TSVD GRP SRP Stack | 0.56831 | 12th June 2017 | [Script 6](https
 Xgboost ICA PCA TSVD GRP SRP | 0.56784 | 10th June 2017 | [Script 5](https://github.com/satacroteam/les-jeunes/blob/master/SCRIPT/script_5.py)
 Xgboost ICA PCA | 0.55983 | 1th June 2017 | ***
 
-## Private Leader Bord
+## Private Leader Board
