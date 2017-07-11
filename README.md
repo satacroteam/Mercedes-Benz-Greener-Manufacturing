@@ -28,7 +28,7 @@ https://rhiever.github.io/tpot/using/ ou https://github.com/rhiever/tpot.git
 Stacking complete guide:
   https://mlwave.com/kaggle-ensembling-guide/
 
-## Résultats
+## Results
 
 model | Public LB | Date | Script
 --- | --- | --- | ---
