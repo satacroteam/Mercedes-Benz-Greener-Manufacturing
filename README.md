@@ -13,11 +13,11 @@ In this competition, Daimler is challenging Kagglers to tackle the curse of dime
 
 ## Codes
 </ul>
-<li>https://www.kaggle.com/c/quora-question-pairs/discussion/34355<li>
-<li>https://github.com/mpearmain/merc/blob/master/src/datasets/build_datasetV1.py<li>
-<li>https://github.com/leexa90/Mercedes-Benz-Greener-Manufacturing<li>
-<li>https://github.com/kcrandall/Kaggle_Mercedes_Manufacturing<li>
-<li>https://github.com/CuriousAI/ladder<li>
+<li>https://www.kaggle.com/c/quora-question-pairs/discussion/34355</li>
+<li>https://github.com/mpearmain/merc/blob/master/src/datasets/build_datasetV1.py</li>
+<li>https://github.com/leexa90/Mercedes-Benz-Greener-Manufacturing</li>
+<li>https://github.com/kcrandall/Kaggle_Mercedes_Manufacturing</li>
+<li>https://github.com/CuriousAI/ladder</li>
 </ul>
 
 
