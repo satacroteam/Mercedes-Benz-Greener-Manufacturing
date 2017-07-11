@@ -20,12 +20,12 @@ In this competition, Daimler is challenging Kagglers to tackle the curse of dime
 <li>https://github.com/CuriousAI/ladder</li>
 </ul>
 
-## Méthodes
+## Methodes
 
-Tuto d'utilisation de Tpot:
+Tpot tutorial:
 https://rhiever.github.io/tpot/using/ ou https://github.com/rhiever/tpot.git
 
-Guide complet stacking:
+Stacking complete guide:
   https://mlwave.com/kaggle-ensembling-guide/
 
 ## Résultats
@@ -39,4 +39,5 @@ Xgboost ICA PCA | 0.55983 | 1th June 2017 | ***
 
 ## Private Leader Board
 
-Classement: 204/3697
+Score: 0.55223
+Ranking: 204/3697
