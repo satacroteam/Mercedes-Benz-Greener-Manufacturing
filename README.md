@@ -37,8 +37,6 @@ Xgboost ICA PCA | 0.55983 | 1th June 2017 | ***
 
 ## Private Leader Board
 
-Final results:
-
 #### Score: 0.55223
 
 #### Ranking: 204/3697
